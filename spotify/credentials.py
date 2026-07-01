@@ -1,3 +1,5 @@
-CLIENT_ID = "64859a88c86d43d6a12e90554beb4eca"
-CLIENT_SECRET = "0d7b4bde9fd747ae8c569df563dc991e"
-REDIRECT_URI = "http://127.0.0.1:8000/spotify/redirect"
+import os
+
+CLIENT_ID = os.environ.get("SPOTIFY_CLIENT_ID", "")
+CLIENT_SECRET = os.environ.get("SPOTIFY_CLIENT_SECRET", "")
+REDIRECT_URI = os.environ.get("SPOTIFY_REDIRECT_URI", "http://127.0.0.1:8000/spotify/redirect")
